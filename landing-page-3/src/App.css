@@ -1,0 +1,42 @@
+/* Main container to center everything in the middle of the page */
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  position: relative; /* Allows child elements to use absolute positioning */
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+/* Cards container */
+.cardContainer {
+  top: 20%;
+  position: relative; /* Allows cards to be positioned inside the circle */
+  width: 100px; /* Size of the circle */
+  height: 1000px; /* Size of the circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Position the cards on top of the circle */
+.cbxstart,
+.ims,
+.delegation,
+.peopledirectory,
+.cbxnotes {
+  position: absolute; /* Absolute positioning for overlapping cards */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform-origin: center; /* Ensures proper rotation around the center */
+  transition: transform 0.3s ease;
+  z-index: 1;
+  /*transform: translate(-50%, -50%) translateY(-50%); /* Center the cards */
+}
+
+/* Hover effect */
+.cardComponent:hover {
+  transform: scale(1.05) translate(-50%, -50%);
+  z-index: 10; /* Make the hovered card appear on top */
+}

@@ -1,0 +1,12 @@
+.circle {
+  width: 1100px; /* Initial width */
+  height: 1100px; /* Initial height */
+  border-radius: 50%; /* Makes it a circle */
+  background-color: #598931; /* Circle's background color */
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  /*transform: translate(-50%, -50%); /* Center the circle at the start */
+  /*transform-origin: center; /* Ensure scaling starts from the circle's center */
+  z-index: -1; /* Keep the circle behind other elements */
+}

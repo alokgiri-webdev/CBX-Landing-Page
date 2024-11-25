@@ -1,0 +1,38 @@
+.heroSectionFirst {
+  margin-top: 300px;
+  margin-left: 30%;
+}
+
+.heroSectionSecond {
+  margin-top: 20px; /* Space between the two lines */
+  text-align: center; /* Center the text horizontally */
+}
+
+.heroContent {
+  color: #403d3d;
+  font-family: sans-serif;
+  font-size: 97.106px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.heroContentSecond {
+  color: #403d3d;
+  font-family: sans-serif;
+  font-size: 97.106px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center; /* Ensure "For you" aligns in the center */
+}
+
+.heroContentBold {
+  color: #598931;
+  font-family: sans-serif;
+  font-size: 97.106px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 40px;
+}
