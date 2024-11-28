@@ -5,8 +5,8 @@ function Circle() {
   return (
     <motion.div
       className={styles.circle}
-      initial={{ scale: 1, x: "-50%", y: "-50%" }} // Start with the original size
-      animate={{ scale: 10, x: "-50%", y: "-50%" }} // Grow 10x to cover the screen
+      initial={{ scale: 1, x: "-50%", y: "-50%" }}
+      animate={{ scale: 10, x: "-50%", y: "-50%" }}
       transition={{ delay: 6, duration: 1.5, ease: "easeInOut" }}
     ></motion.div>
   );

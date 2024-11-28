@@ -12,11 +12,10 @@
   align-items: center;
   text-align: center;
   justify-content: space-between;
-  position: relative; /* Ensure the card is a containing block */
-  overflow: hidden; /* Prevent any button overflow */
+  position: relative;
+  overflow: hidden;
 }
 
-/* Adjust the logo and content */
 .logoContainer {
   margin-bottom: 5px;
   margin-top: 5%;
@@ -46,40 +45,37 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  object-fit: cover; /* Ensure the image fills the container proportionally */
+  object-fit: cover;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-/* Button container */
 .buttonContainer {
-  width: 100%; /* Ensure the container spans the full card width */
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Horizontally center the button */
-  align-items: center; /* Vertically center the button if needed */
-  padding: 10px 0; /* Add padding for proper spacing */
-  box-sizing: border-box; /* Ensure padding doesn't affect container size */
-  overflow: hidden; /* Prevent any overflow issues */
-}
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  overflow: hidden;
 
-/* Button styling */
-.learnMoreButton {
-  background-color: #4d8733; /* Button background color */
-  color: white; /* Text color */
-  padding: 10px 20px; /* Button padding */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 1.2rem; /* Button text size */
-  cursor: pointer; /* Pointer cursor on hover */
-  display: inline-flex; /* Use flexbox for alignment */
-  align-items: center; /* Center text and icon vertically */
-  justify-content: center; /* Center text and icon horizontally */
-  max-width: 90%; /* Prevent the button from exceeding the card width */
-  text-align: center; /* Center the text */
-  overflow: hidden; /* Ensure no content overflows */
-}
+  .learnMoreButton {
+    background-color: #4d8733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    text-align: center;
+    overflow: hidden;
+  }
 
-/* Button hover effect */
-.learnMoreButton:hover {
-  background-color: #3a6e27; /* Darker green on hover */
+  .learnMoreButton:hover {
+    background-color: #3a6e27;
+  }
 }

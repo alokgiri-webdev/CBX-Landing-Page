@@ -14,7 +14,7 @@ import NavBar from "./NavBar";
 import HeroSection from "./HeroSection";
 
 function App() {
-  const cardWidthPercentage = 90; // Each card moves by 90% of its width
+  const cardWidthPercentage = 90;
   const maxClicks = 4;
 
   const cbxStartControls = useAnimation();
@@ -25,7 +25,7 @@ function App() {
   const textControls = useAnimation();
 
   const [isButtonVisible, setIsButtonVisible] = useState(false);
-  const [clickCount, setClickCount] = useState(0); // Track the number of button clicks
+  const [clickCount, setClickCount] = useState(0);
   const [positions, setPositions] = useState({
     cbxStart: -200,
     ims: -90,
@@ -38,7 +38,6 @@ function App() {
     const newClickCount = clickCount + 1;
 
     if (newClickCount <= maxClicks) {
-      // Update positions dynamically
       setPositions((prevPositions) => ({
         cbxStart: prevPositions.cbxStart + cardWidthPercentage,
         ims: prevPositions.ims + cardWidthPercentage,
@@ -47,7 +46,6 @@ function App() {
         cbxNotes: prevPositions.cbxNotes + cardWidthPercentage,
       }));
 
-      // Trigger the moveRight animation for all cards
       cbxStartControls.start({
         x: `${positions.cbxStart + cardWidthPercentage}%`,
       });
@@ -64,7 +62,6 @@ function App() {
 
       setClickCount(newClickCount);
     } else {
-      // Reset to initial "second" positions after 4 clicks
       setPositions({
         cbxStart: -200,
         ims: -90,
@@ -79,16 +76,14 @@ function App() {
       peopleDirectoryControls.start({ x: "130%" });
       cbxNotesControls.start({ x: "240%" });
 
-      setClickCount(0); // Reset click count
+      setClickCount(0);
     }
   };
 
   useEffect(() => {
     async function startAnimations() {
-      // Delay for 6 seconds before starting the animations
       await new Promise((resolve) => setTimeout(resolve, 6000));
 
-      // Initial animations
       await Promise.all([
         cbxStartControls.start("first"),
         imsControls.start("first"),
@@ -97,14 +92,12 @@ function App() {
         cbxNotesControls.start("first"),
       ]);
 
-      // Text animation
       await textControls.start({
         x: "10%",
         opacity: 1,
         transition: { duration: 1.5, ease: "easeInOut", delay: 1 },
       });
 
-      // Second animations
       await Promise.all([
         cbxStartControls.start("second"),
         imsControls.start("second"),
@@ -113,7 +106,6 @@ function App() {
         cbxNotesControls.start("second"),
       ]);
 
-      // Show button
       setTimeout(() => {
         setIsButtonVisible(true);
       }, 500);
@@ -158,7 +150,6 @@ function App() {
         </motion.div>
 
         <center className="cardContainer">
-          {/* CBX Start Card */}
           <motion.div
             className="cbxstart"
             initial="initial"
@@ -177,7 +168,6 @@ function App() {
             />
           </motion.div>
 
-          {/* IMS Card */}
           <motion.div
             className="ims"
             initial="initial"
@@ -196,7 +186,6 @@ function App() {
             />
           </motion.div>
 
-          {/* Delegation Card */}
           <motion.div
             className="delegation"
             initial="initial"
@@ -215,7 +204,6 @@ function App() {
             />
           </motion.div>
 
-          {/* People Directory Card */}
           <motion.div
             className="peopledirectory"
             initial="initial"
@@ -234,7 +222,6 @@ function App() {
             />
           </motion.div>
 
-          {/* CBX Notes Card */}
           <motion.div
             className="cbxnotes"
             initial="initial"

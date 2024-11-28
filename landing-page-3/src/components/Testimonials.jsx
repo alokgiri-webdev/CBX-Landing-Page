@@ -33,7 +33,6 @@ function Testimonials() {
 
   return (
     <div className={styles.testimonialSection}>
-      {/* Testimonial Text */}
       <div className={styles.testimonialText}>
         <motion.div
           key={currentTestimonial}
@@ -50,14 +49,13 @@ function Testimonials() {
             <div
               className={styles.dividerArrow}
               style={{
-                left: `calc(${currentTestimonial * 33}% + 10px)`, // Dynamically position pointer
+                left: `calc(${currentTestimonial * 33}% + 10px)`,
               }}
             ></div>
           </div>
         </motion.div>
       </div>
 
-      {/* Profile Thumbnails */}
       <div className={styles.profileThumbnails}>
         {testimonials.map((profile, index) => (
           <motion.div

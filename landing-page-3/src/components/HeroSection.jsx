@@ -4,13 +4,12 @@ import { motion } from "framer-motion";
 function HeroSection() {
   return (
     <>
-      {/* First Hero Section Animation */}
       <motion.div
         className={styles.heroSectionFirst}
         initial={{ y: "-100vh", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
-          delay: 1, // Delayed animation starts after NavBar animation
+          delay: 1,
           type: "spring",
           stiffness: 100,
           damping: 15,
@@ -22,13 +21,12 @@ function HeroSection() {
         </h1>
       </motion.div>
 
-      {/* Second Hero Section Animation */}
       <motion.div
         className={styles.heroSectionSecond}
         initial={{ y: "-100vh", opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{
-          delay: 1.5, // Slight delay after the first Hero Section animation
+          delay: 1.5,
           type: "spring",
           stiffness: 100,
           damping: 15,
